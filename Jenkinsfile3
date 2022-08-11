@@ -39,7 +39,7 @@ environment {
         }
         stage('5-output') {
             steps {
-                  echo ${BUILD_NUMBER} > buildnumberfile.txt
+                  sh "echo ${BUILD_NUMBER} > buildnumberfile.txt"
                   echo "Congratulations!    Here is what does File.txt contain: "
                   sh 'cat File.txt'
                   echo "Here is what does buildnumberfile.txt contain: "

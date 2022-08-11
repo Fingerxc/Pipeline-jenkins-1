@@ -1,0 +1,40 @@
+pipeline {
+    agent {
+          any { image 'python:3.10' }
+    }
+environment {
+    PROJECT_NAME  = "SpaceShip"
+    PROJECT_OWNER = "Oleksandr Petrunko"
+}
+    
+    stages {
+        stage('1-Build') {
+            steps {
+                echo "Start of stage Build"
+                            echo "Building..........."
+                            sh "python --version"
+                            echo "End of Stage Build"
+            }
+        }
+        stage('2-Test') {
+            steps {
+                 echo "Start of stage Test"
+                            echo "Testing..........."
+                            echo "It is a project named ${PROJECT_NAME} created by ${PROJECT_OWNER}."
+                            echo "End of Stage Test"
+            }
+        }
+        stage('3-Deploy') {
+            steps {
+                 echo "Start of stage Deploy"
+                            echo "Deploying..........."
+                            echo "End of Stage Deploy"
+            }
+        }
+        stage('4-Celebrate') {
+            steps {
+                  echo "Congratulations!"
+            } 
+        }
+    
+}

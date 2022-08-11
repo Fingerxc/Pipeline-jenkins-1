@@ -12,7 +12,7 @@ environment {
             steps {
                 echo "Start of stage Build"
                             echo "Building..........."
-                            sh "python --version"
+                            sh "python3 --version"
                             echo "End of Stage Build"
             }
         }

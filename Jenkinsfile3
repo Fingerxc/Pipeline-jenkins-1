@@ -28,6 +28,7 @@ environment {
             steps {
                  echo "Start of stage Deploy"
                             echo "Deploying..........."
+                            sh 'ls -la'
                             echo "End of Stage Deploy"
             }
         }
